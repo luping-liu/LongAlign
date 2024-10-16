@@ -1,6 +1,6 @@
 # Improving Long-Text Alignment for Text-to-Image Diffusion Models
 
-This repo is the official PyTorch implementation for Improving Long-Text Alignment for Text-to-Image Diffusion Models (LongAlign)
+This repo is the official PyTorch implementation for [Improving Long-Text Alignment for Text-to-Image Diffusion Models (LongAlign)](https://arxiv.org/abs/2410.11817)
 
 by [Luping Liu](https://luping-liu.github.io/)<sup>1,2</sup>, Chao Du<sup>2</sup>, Tianyu Pang<sup>2</sup>, Zehan Wang<sup>2,4</sup>, Chongxuan Li<sup>3</sup>, Dong Xu<sup>1</sup>.
 
@@ -12,7 +12,7 @@ by [Luping Liu](https://luping-liu.github.io/)<sup>1,2</sup>, Chao Du<sup>2</sup
 To improve long-text alignment for T2I diffusion models, we propose **LongAlign**, which features a **segment-level encoding** method for processing long texts and a **decomposed preference optimization** method for effective alignment training. For decomposed preference optimization, we find the preference models can be decomposed into two components: a text-relevant part and a text-irrelevant part. We propose a reweighting strategy that assigns different weights to these two components, reducing overfitting and enhancing alignment.
 
 
-### Preference decomposition
+### CLIP-based preference decomposition
 
 - (a) Schematic results for text embeddings. (b) Statistics of the projection scalar $\eta$ for three CLIP-based preference models. (c) The relationship between the original preference score and the two scores after decomposition.
 ![](./images/decomposition.webp)
@@ -71,8 +71,13 @@ bash run_unet.sh reward_lcm test
 
 If you find this work useful for your research, please consider citing:
 
-```
-
+```bib
+@article{liu2024improving,
+      title={Improving Long-Text Alignment for Text-to-Image Diffusion Models}, 
+      author={Luping Liu and Chao Du and Tianyu Pang and Zehan Wang and Chongxuan Li and Dong Xu},
+      year={2024},
+      journal={arXiv preprint arXiv:2410.11817},
+}
 ```
 
 This code is mainly built upon [diffusers](https://github.com/huggingface/diffusers) and [LaVi-Bridge](https://github.com/ShihaoZhaoZSH/LaVi-Bridge) repositories, which you might also find interesting.
