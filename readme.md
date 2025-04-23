@@ -45,6 +45,14 @@ pip install -r requirements.txt
 - longSD (please download this to `./model/longSD` or train them yourself): https://huggingface.co/luping-liu/LongSD
 
 
+### Sample with Long Stable Diffusion
+
+```bash
+# First, run `huggingface-cli login`
+# The model/longSD directory looks like: s28750_adapter, s28750_lora_vis.pt, sd15-reward-3750.pt
+python3 sample.py --prompt "xxx"
+```
+
 ### Train original Stable Diffusion
 
 ```bash

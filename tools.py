@@ -14,7 +14,7 @@ from torch.cuda.amp import custom_bwd, custom_fwd
 
 drop_ratio = float(os.environ.get('MY_ENVIRON_DROP', 0.1))
 sample_method = os.environ.get('MY_ENVIRON_SAMPLE', 'lcm') # unipc, lcm
-print(f'current drop_ratio of caption: {drop_ratio}; sample_method: {sample_method}')
+# print(f'current drop_ratio of caption: {drop_ratio}; sample_method: {sample_method}')
 validation_embeds = None
 
 
